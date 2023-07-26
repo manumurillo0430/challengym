@@ -44,7 +44,7 @@ const Home = ({ setSelectedPage }: Props) => {
             </div>
 
             <p className="mt-8 text-sm">
-              Tired of monotonous workouts? Welcome to ChallengenGym, your
+              Tired of monotonous workouts? Welcome to ChallenGym, your
               destination for challenging, exciting, and rewarding fitness
               journeys.
               <br /> We offer innovative workout regimes, tailored to your
@@ -52,10 +52,9 @@ const Home = ({ setSelectedPage }: Props) => {
               a supportive community transform fitness into a lifestyle. <br />
               Join ChallengenGym. Embrace challenges. Witness transformations.
               <br />
-              <strong>
-                Sign up today! Begin your journey towards a healthier, stronger,
-                more confident YOU.
-              </strong>
+              <br />
+              Sign up today! Begin your journey towards a healthier, stronger,
+              more confident YOU.
             </p>
           </motion.div>
 
@@ -95,7 +94,7 @@ const Home = ({ setSelectedPage }: Props) => {
 
       {/* SPONSORS */}
       {isAboveMediumScreens && (
-        <div className="h-[150px] w-full bg-primary-100 py-10">
+        <div className="flex h-[150px] w-full items-center justify-center bg-primary-100 py-10">
           <div className="mx-auto w-5/6">
             <div className="flex w-3/5 items-center justify-between gap-8">
               <img alt="redbull-sponsor" src={SponsorRedBull} />

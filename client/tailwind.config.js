@@ -4,11 +4,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "gray-20": "#F8F4E8",
+        "gray-20": "#F8F4E8", // Background color home page
         "gray-50": "#EFE6E6",
-        "gray-100": "#DFCCCC",
+        "gray-100": "#EEEEEE",
         "gray-500": "#5E0000",
-        "primary-100": "#FFE1E0",
+        "primary-100": "#FFE1E0", // Pink navbar
         "primary-300": "#FFA6A3",
         "primary-500": "#FF6B66",
         "secondary-400": "#FFCD58",

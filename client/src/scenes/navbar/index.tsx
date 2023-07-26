@@ -12,11 +12,16 @@ type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
-const Navbar = ({ setSelectedPage, selectedPage, isTopOfPage }: Props) => {
+const Navbar = ({ isTopOfPage }: Props) => {
   const flexBetween = "flex items-center justify-between";
   const [isMenuToggle, setIsMenuToggle] = useState<boolean>(false);
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const navbarBackground = isTopOfPage ? "" : "bg-primary-100 drop-shadow";
+  const [selectedPage, setSelectedPage] = useState<SelectedPage>(() => {
+    const hash = window.location.hash;
+    const currentPage = hash.slice(1).replace(/ /g, " ") as SelectedPage;
+    return currentPage || "home";
+  });
 
   return (
     <nav>
@@ -27,12 +32,11 @@ const Navbar = ({ setSelectedPage, selectedPage, isTopOfPage }: Props) => {
           {/* LEFT SIDE */}
           <div className={`${flexBetween} w-full gap-16`}>
             <img src={Logo} alt="logo" />
-
             {/* RIGHT SIDE */}
             {isAboveMediumScreens ? (
               <div className={`${flexBetween} w-full`}>
                 {/* INNER LEFT SIDE  */}
-                <div className={`${flexBetween} gap-8 text-sm`}>
+                <div className={`${flexBetween} text-md gap-8`}>
                   <Link
                     page="Home"
                     selectedPage={selectedPage}
@@ -55,7 +59,7 @@ const Navbar = ({ setSelectedPage, selectedPage, isTopOfPage }: Props) => {
                   />
                 </div>
                 {/* INNER RIGHT SIDE  */}
-                <div className={`${flexBetween} gap-8`}>
+                <div className={`${flexBetween} text-md gap-8`}>
                   <p>Sign in</p>
                   <ActionButton setSelectedPage={setSelectedPage}>
                     Become a member

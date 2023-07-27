@@ -45,17 +45,17 @@ const Home = ({ setSelectedPage }: Props) => {
             </div>
 
             <p className="mt-8 text-sm">
-              Tired of monotonous workouts? Welcome to ChallenGym, your
+              Tired of monotonous workouts? Welcome to QuickFit Gym, your
               destination for challenging, exciting, and rewarding fitness
               journeys.
               <br /> We offer innovative workout regimes, tailored to your
               fitness goals. Our top-notch facility, personalized programs, and
               a supportive community transform fitness into a lifestyle. <br />
-              Join ChallengenGym. Embrace challenges. Witness transformations.
+              Join Quick Fit Gym. Embrace challenges. Witness transformations.
               <br />
               <br />
               Sign up today! Begin your journey towards a healthier, stronger,
-              more confident YOU.
+              more confident <strong>YOU</strong>.
             </p>
           </motion.div>
 
@@ -75,7 +75,7 @@ const Home = ({ setSelectedPage }: Props) => {
               Join Now
             </ActionButton>
             <AnchorLink
-              className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
+              className="text-sm font-bold text-white underline hover:text-base hover:text-primary-500"
               onClick={() => setSelectedPage(SelectedPage.ContactUs)}
               href={`#${SelectedPage.ContactUs}`}
             >
@@ -101,7 +101,6 @@ const Home = ({ setSelectedPage }: Props) => {
               <img alt="menshealth-sponsor" src={SponsorMensHealth} />
               <img alt="forbes-sponsor" src={SponsorForbes} />
               <img alt="fortune-sponsor" src={SponsorFortune} />
-
               <img alt="redbull-sponsor" src={SponsorRedBull} />
             </div>
           </div>

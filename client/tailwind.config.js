@@ -26,6 +26,7 @@ module.exports = {
       },
       content: {
         evolvetext: "url('./assets/EvolveText.png')",
+        logowhite: "url('./assets/LogoWhite.png')",
         abstractwaves: "url('./assets/AbstractWaves.png')",
         sparkles: "url('./assets/Sparkles.png')",
         circles: "url('./assets/Circles.png')",
@@ -37,8 +38,14 @@ module.exports = {
       md: "1060px",
     },
   },
+  variants: {
+    extend: {
+      textColor: ["responsive", "hover", "focus", "group-hover"],
+    },
+  },
   plugins: [],
 };
+
 // #030E1E - Dark blue
 // #FCFCFC - White
 // #2AFFBD - Green (hover)

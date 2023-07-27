@@ -6,6 +6,7 @@ import Link from "./Link";
 import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import ActionButton from "@/shared/ActionButton";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 type Props = {
   isTopOfPage: boolean;
@@ -34,12 +35,17 @@ const Navbar = ({ isTopOfPage }: Props) => {
       >
         <div className={`${flexBetween} mx-auto w-5/6`}>
           {/* LEFT SIDE */}
-          <div className={`${flexBetween} w-full gap-16`}>
-            <div className="flex w-1/5 items-center gap-6">
-              <img src={Logo2} alt="logo2" />
-              <img src={Logo} alt="logo" />
-            </div>
 
+          <div className={`${flexBetween} w-full gap-16`}>
+            <AnchorLink
+              href="#home"
+              onClick={() => setSelectedPage(SelectedPage.Home)}
+            >
+              <div className="flex w-full items-center gap-6">
+                <img src={Logo2} alt="logo2" />
+                <img src={Logo} alt="logo" />
+              </div>
+            </AnchorLink>
             {/* RIGHT SIDE */}
             {isAboveMediumScreens ? (
               <div className={`${flexBetween} w-full`}>
@@ -68,7 +74,6 @@ const Navbar = ({ isTopOfPage }: Props) => {
                 </div>
                 {/* INNER RIGHT SIDE  */}
                 <div className={`${flexBetween} text-md gap-8`}>
-                  <p>Sign in</p>
                   <ActionButton setSelectedPage={setSelectedPage}>
                     Become a member
                   </ActionButton>
@@ -76,10 +81,10 @@ const Navbar = ({ isTopOfPage }: Props) => {
               </div>
             ) : (
               <button
-                className="rounded-full bg-secondary-500 p-2"
+                className="group rounded-md border-2 px-2 py-2 hover:border-primary-500 hover:text-primary-500"
                 onClick={() => setIsMenuToggle(!isMenuToggle)}
               >
-                <Bars3Icon className="h-6 w-6 text-white" />
+                <Bars3Icon className="h-6 w-6 text-white group-hover:text-primary-500" />
               </button>
             )}
           </div>
@@ -88,7 +93,7 @@ const Navbar = ({ isTopOfPage }: Props) => {
 
       {/* MOBILE MENU */}
       {isMenuToggle && !isAboveMediumScreens && (
-        <div className="fixed bottom-0 right-0 z-40 h-full w-[300px] bg-primary-100 drop-shadow-xl">
+        <div className="fixed bottom-0 right-0 z-40 h-full w-[300px] bg-gray-30 drop-shadow-xl">
           {/* CLOSE ICON */}
           <div className="flex justify-end p-12">
             <button onClick={() => setIsMenuToggle(!isMenuToggle)}>

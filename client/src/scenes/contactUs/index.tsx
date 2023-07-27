@@ -9,8 +9,8 @@ type Props = {
 };
 
 const ContactUs = ({ setSelectedPage }: Props) => {
-  const inputStyles = `mb-5 w-full rounded-lg bg-primary-300
-  px-5 py-3 placeholder-white`;
+  const inputStyles = `mb-5 w-full rounded-lg bg-secondary-100
+  px-5 py-3 placeholder-black`;
 
   const {
     register,
@@ -46,9 +46,12 @@ const ContactUs = ({ setSelectedPage }: Props) => {
             <span className="text-primary-500">JOIN NOW</span> TO GET IN SHAPE
           </HText>
           <p className="my-5">
-            Congue adipiscing risus commodo placerat. Tellus et in feugiat nisl
-            sapien vel rhoncus. Placerat at in enim pellentesque. Nulla
-            adipiscing leo egestas nisi elit risus sit. Nunc cursus sagittis.
+            Start your transformation today with QuickFit Gym. We provide an
+            immersive, supportive, and goal-driven environment perfect for
+            anyone looking to improve their fitness level. Whether you are a
+            beginner or an experienced athlete, our diverse range of programs
+            are designed to help you achieve your health and wellness goals.
+            Let's step into this journey towards a stronger, healthier you.
           </p>
         </motion.div>
 
@@ -126,7 +129,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
 
               <button
                 type="submit"
-                className="mt-5 rounded-lg bg-secondary-500 px-20 py-3 transition duration-500 hover:text-white"
+                className="group rounded-md border-2 px-6 py-2 hover:border-primary-500 hover:text-primary-500"
               >
                 SUBMIT
               </button>
@@ -144,9 +147,9 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            <div className="w-full before:absolute before:-bottom-20 before:-right-0 before:z-[-1] md:before:content-evolvetext">
+            <div className=" w-full before:absolute before:-bottom-20 before:-right-0 before:z-[1] md:before:content-logowhite">
               <img
-                className="w-full rounded-lg "
+                className="mb-20 w-full rounded-lg "
                 alt="contact-us-page-graphic"
                 src={ContactUsPageGraphic}
               />

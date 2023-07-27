@@ -17,10 +17,10 @@ const classes: Array<IClassType> = [
     image: image3,
   },
   {
-    name: "Yoga",
+    name: "Boxing Fitness",
     description:
-      "A gentle yet challenging class that focuses on flexibility, balance, and mindfulness. Suitable for all levels and ideal for reducing stress and improving body strength.",
-    image: image4,
+      "A high-energy workout based on training methods used by boxers. It combines cardio and strength training, enhancing endurance, agility, speed, and power. Perfect for those who want an intense, full-body workout while learning self-defense techniques.",
+    image: image5,
   },
   {
     name: "Cardio Class",
@@ -34,12 +34,11 @@ const classes: Array<IClassType> = [
       "A low-impact class that emphasizes postural alignment, core strength, and muscle balance. Excellent for improving flexibility and body awareness.",
     image: image1,
   },
-
   {
-    name: "Boxing Fitness",
+    name: "Yoga",
     description:
-      "A high-energy workout based on training methods used by boxers. It combines cardio and strength training, enhancing endurance, agility, speed, and power. Perfect for those who want an intense, full-body workout while learning self-defense techniques.",
-    image: image5,
+      "A gentle yet challenging class that focuses on flexibility, balance, and mindfulness. Suitable for all levels and ideal for reducing stress and improving body strength.",
+    image: image4,
   },
   {
     name: "Zumba",

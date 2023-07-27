@@ -14,37 +14,38 @@ const classes: Array<IClassType> = [
     name: "High Intensity Interval Training (HIIT)",
     description:
       "An intense cardio workout that alternates between periods of high-intensity and low-intensity exercise. Perfect for those looking to burn fat and improve cardiovascular health in a short amount of time.",
-    image: image1,
+    image: image3,
   },
   {
     name: "Yoga",
     description:
       "A gentle yet challenging class that focuses on flexibility, balance, and mindfulness. Suitable for all levels and ideal for reducing stress and improving body strength.",
+    image: image4,
+  },
+  {
+    name: "Cardio Class",
+    description:
+      "A high-intensity workout that takes place on our salon. Great for those looking to boost cardiovascular health and lower body strength.",
     image: image2,
   },
   {
     name: "Pilates",
     description:
       "A low-impact class that emphasizes postural alignment, core strength, and muscle balance. Excellent for improving flexibility and body awareness.",
-    image: image3,
+    image: image1,
   },
-  {
-    name: "Spin Class",
-    description:
-      "A high-intensity cycling workout that takes place on a stationary bike. Great for those looking to boost cardiovascular health and lower body strength.",
-    image: image5,
-  },
+
   {
     name: "Boxing Fitness",
     description:
       "A high-energy workout based on training methods used by boxers. It combines cardio and strength training, enhancing endurance, agility, speed, and power. Perfect for those who want an intense, full-body workout while learning self-defense techniques.",
-    image: image6,
+    image: image5,
   },
   {
     name: "Zumba",
     description:
       "A fun, high-energy class that combines Latin dance moves with cardio exercise. Perfect for those who enjoy dynamic workouts and dancing.",
-    image: image4,
+    image: image6,
   },
 ];
 
@@ -54,7 +55,7 @@ type Props = {
 
 const OurClasses = ({ setSelectedPage }: Props) => {
   return (
-    <section id="ourclasses" className="w-full bg-primary-100 py-40 ">
+    <section id="ourclasses" className="w-full bg-primary-500 py-40 ">
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.OurClasses)}
       >

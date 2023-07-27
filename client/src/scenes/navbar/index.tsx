@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
 import Logo from "@/assets/Logo.png";
+import Logo2 from "@/assets/Logo2.png";
 import Link from "./Link";
 import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
@@ -14,9 +15,12 @@ type Props = {
 
 const Navbar = ({ isTopOfPage }: Props) => {
   const flexBetween = "flex items-center justify-between";
+
   const [isMenuToggle, setIsMenuToggle] = useState<boolean>(false);
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
-  const navbarBackground = isTopOfPage ? "" : "bg-primary-100 drop-shadow";
+  const navbarBackground = isTopOfPage
+    ? "bg-gray-20"
+    : "bg-gray-30 drop-shadow";
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(() => {
     const hash = window.location.hash;
     const currentPage = hash.slice(1).replace(/ /g, " ") as SelectedPage;
@@ -31,7 +35,11 @@ const Navbar = ({ isTopOfPage }: Props) => {
         <div className={`${flexBetween} mx-auto w-5/6`}>
           {/* LEFT SIDE */}
           <div className={`${flexBetween} w-full gap-16`}>
-            <img src={Logo} alt="logo" />
+            <div className="flex w-1/5 items-center gap-6">
+              <img src={Logo2} alt="logo2" />
+              <img src={Logo} alt="logo" />
+            </div>
+
             {/* RIGHT SIDE */}
             {isAboveMediumScreens ? (
               <div className={`${flexBetween} w-full`}>

@@ -4,13 +4,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "gray-20": "#F8F4E8", // Background color home page
+        "gray-20": "#000000",
+        "gray-30": "#030e1eed", // Background color home page
         "gray-50": "#EFE6E6",
         "gray-100": "#EEEEEE",
-        "gray-500": "#5E0000",
+        "gray-500": "#FCFCFC",
         "primary-100": "#FFE1E0", // Pink navbar
-        "primary-300": "#FFA6A3",
-        "primary-500": "#FF6B66",
+        "primary-300": "#aee8d8", // hover navbar
+        "primary-500": "#5cd0b0",
         "secondary-400": "#FFCD58",
         "secondary-500": "#FFC132",
       },
@@ -38,3 +39,7 @@ module.exports = {
   },
   plugins: [],
 };
+// #030E1E - Dark blue
+// #FCFCFC - White
+// #2AFFBD - Green (hover)
+// #38F4C3 - Green FLUOR

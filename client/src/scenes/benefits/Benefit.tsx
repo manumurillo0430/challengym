@@ -18,7 +18,7 @@ const Benefit = ({ icon, title, description, setSelectedPage }: Props) => {
   return (
     <motion.div
       variants={chilVariant}
-      className="mt-5 rounded-md border-2 border-gray-100 p-6 text-center"
+      className="mt-5 rounded-md border-2 border-gray-100 bg-gray-20 p-6 text-center"
     >
       <div className="mb-4 flex justify-center">
         <div className="rounded-full border-2 border-gray-100 bg-primary-100 p-4">
